@@ -10,7 +10,6 @@ Documentation     Fazer o CRUD na Api ServeRest
 Resource    ../resources/base.robot
 
 *** Test Cases ***
-#robot -N "Testes em HML APP Digital" -d .logs -i Login ./features/login.robot
 Cenario 01: Realizar o CRUD na API Servrest 
     [Tags]    
     Dado que eu acessse o Swaagger ServeReest e liste todos os usuarios
