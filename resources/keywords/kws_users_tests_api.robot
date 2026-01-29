@@ -95,6 +95,24 @@ Então será possível realizar login com os novos dados
     Log To Console  \n...Mensagem: ${mensagem}
     Log To Console  ......Token: ${token}\n
 
+E então exclui o usuario criado
+    Create Session    httpbin    ${BASE_URL}    disable_warnings=True 
+    ${headers}=    Create Dictionary    Authorization=
+    ${resp}=    DELETE On Session   httpbin    ${BASE_URL}${list_users}/${ID}    headers=${headers}
+
+    Should Be True    '${resp.status_code}'=='200'
+    ${json}=           Set Variable           ${resp.json()}    
+
+    ${mensagem}=    Get From Dictionary    ${json}       message
+    
+    Set Suite Variable    ${mensagem}    ${mensagem}
+
+    Log To Console  \n
+    Log To Console  ==============================================================================
+    Log To Console  Usuário excluído com sucesso!!!
+    Log To Console  ==============================================================================
+    Log To Console  \n...Mensagem: ${mensagem}\n
+    
 Listar Usuario pelo ID
     Create Session    httpbin    ${BASE_URL}    disable_warnings=True 
     ${headers}=    Create Dictionary    Authorization=

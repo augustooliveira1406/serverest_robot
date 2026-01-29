@@ -1,42 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.2 on darwin)" generated="2026-01-29T11:06:08.057505" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.14.2 on darwin)" generated="2026-01-29T12:29:26.785859" rpa="false" schemaversion="5">
 <suite id="s1" name="Features" source="/Users/augustooliveira/Projetos/carrefour-robot-api/features">
 <suite id="s1-s1" name="Users Tests Api" source="/Users/augustooliveira/Projetos/carrefour-robot-api/features/users_tests_api.robot">
-<test id="s1-s1-t1" name="Cenario 01: Realizar o CRUD na API Servrest" line="14">
+<test id="s1-s1-t1" name="Cenario 01: Realizar o CRUD na API Servrest" line="13">
 <kw name="Dado que eu acessse o Swaagger ServeReest e liste todos os usuarios" owner="kws_users_tests_api">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2026-01-29T11:06:08.270117" level="INFO">Creating Session using : alias=httpbin, url=https://serverest.dev, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2026-01-29T12:29:26.941904" level="INFO">Creating Session using : alias=httpbin, url=https://serverest.dev, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>httpbin</arg>
 <arg>${BASE_URL}</arg>
 <arg>disable_warnings=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-01-29T11:06:08.269978" elapsed="0.000232"/>
+<status status="PASS" start="2026-01-29T12:29:26.941784" elapsed="0.000232"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-01-29T11:06:08.270413" level="INFO">${headers} = {'Authorization': ''}</msg>
+<msg time="2026-01-29T12:29:26.942214" level="INFO">${headers} = {'Authorization': ''}</msg>
 <var>${headers}</var>
 <arg>Authorization=</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-01-29T11:06:08.270272" elapsed="0.000153"/>
+<status status="PASS" start="2026-01-29T12:29:26.942077" elapsed="0.000148"/>
 </kw>
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2026-01-29T11:06:09.228157" level="INFO">GET Request : url=https://serverest.dev/usuarios 
+<msg time="2026-01-29T12:29:27.729661" level="INFO">GET Request : url=https://serverest.dev/usuarios 
  path_url=/usuarios 
  headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': ''} 
  body=None 
  </msg>
-<msg time="2026-01-29T11:06:09.228317" level="INFO">GET Response : url=https://serverest.dev/usuarios 
+<msg time="2026-01-29T12:29:27.729803" level="INFO">GET Response : url=https://serverest.dev/usuarios 
  status=200, reason=OK 
- headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'x-cloud-trace-context': 'e5e73bd708b4a4295e201318bc7eb806;o=1', 'date': 'Thu, 29 Jan 2026 14:06:09 GMT', 'server': 'Google Frontend', 'Content-Length': '5420'} 
+ headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'x-cloud-trace-context': 'f5040bc33314f068047dd83fc023bafb;o=1', 'date': 'Thu, 29 Jan 2026 15:29:27 GMT', 'server': 'Google Frontend', 'Content-Length': '35492'} 
  body={
-    "quantidade": 25,
+    "quantidade": 161,
     "usuarios": [
+        {
+            "nome": "Nome Atualizado",
+            "email": "joaod059c0eb@test.com",
+            "password": "senha123456",
+            "administrador": "false",
+            "_id": "0ViWNvvU97GwKhMD"
+        },
+        {
+            "nome": "João Silva fa58f",
+            "email": "joao778eaa1c@test.com",
+            "password": "senha123456",
+            "administrador": "true",
+            "_id": "0hJCoTB7Bt7JkkGk"
+        },
+        {
+            "nome": "João Silva 95440",
+            "email": "joaoa93356c4@test.com",
+            "password": "senha123456",
+            "administrador": "true",
+            "_id": "0hLhZjpiooJWfWKq"
+        },
         {
             "nome": "Fulano da Silva",
             "email": "fulano@qa.com",
             "password": "teste",
             "administrador": "true",
             "_id": "0uxuPY0cbmQhpEz1"
+        },
+        {
+            "nome": "Novo Nome Teste",
+            "email": "joao5e594559@test.com",
+            "password": "senha123456",
+            "administrador": "true",
+            "_id": "0wmGpsq5ABiKCTvF"
+        },
+        {
+            "nome": "Novo Nome Teste",
+            "email": "joaodfe5f740@test.com",
+            "password": "senha123456",
+            "administrador": "true",
+            "_id": "1OQLogqPjpBDnITm"
+        },
+        {
+            "nome": "João Silva a6428",
+            "email": "joao90bf7afa@test.com",
+            "password": "senha123456",
+            "administrador": "true",
+            "_id": "1vnzgp7x2gllIxGj"
         },
         {
             "nome": "Fulano da Silva",
@@ -46,11 +88,67 @@
             "_id": "2FOhAqjHmLVelqRh"
         },
         {
+            "nome": "Novo Nome Teste",
+            "email": "joao03f2025a@test.com",
+            "password": "senha123456",
+            "administrador": "true",
+            "_id": "2Xa1xn2udkSfGjH2"
+        },
+        {
+            "nome": "João Silva 6f479",
+            "email": "joao2d5f7b04@test.com",
+            "password": "senha123456",
+            "administrador": "true",
+            "_id": "2ZWjDKEjfFae1HFK"
+        },
+        {
+            "nome": "João Silva bacf1",
+            "email": "joao90704587@test.com",
+            "password": "senha123456",
+            "administrador": "true",
+            "_id": "35PJyN323DuJEHQG"
+        },
+        {
             "nome": "luis henrique",
             "email": "luishenrique@gmail.com",
             "password": "12345678",
             "administrador": "true",
             "_id": "3OcVAsBE817d0Axu"
+        },
+        {
+            "nome": "Nome Atualizado",
+            "email": "joao5630c569@test.com",
+            "password": "senha123456",
+            "administrador": "false",
+            "_id": "3QUjjR5hE4SpQ86P"
+        },
+        {
+            "nome": "João Silva 093b5",
+            "email": "joao347b012f@test.com",
+            "password": "senha123456",
+            "administrador": "true",
+            "_id": "3brPHBaFAFQChxyI"
+        },
+        {
+            "nome": "João Silva a4af3",
+            "email": "joaoae5092df@test.com",
+            "password": "senha123456",
+            "administrador": "true",
+            "_id": "3jLyIMV2AMLavlbv"
+        },
+        {
+            "nome": "João Silva d8e79",
+            "email": "joao0b2aaff4@test.com",
+            "password": "senha123456",
+            "administrador": "true",
+            "_id": "5H3Oyix7S92kyQko"
+        },
+        {
+            "nome": "João Silva dc576",
+            "email": "joao39e61142@test.com",
+            "password": "senha123456",
+            "administrador": "true",
+            "_id": "5T8vD3Ap3gVMps8F"
         },
         {
             "nome": "Julianne47",
@@ -60,11 +158,95 @@
             "_id": "5kNF0ux7XINbLQhU"
         },
         {
+            "nome": "João Silva 4f5ba",
+            "email": "joao9ebc00e3@test.com",
+            "password": "senha123456",
+            "administrador": "true",
+            "_id": "5ntTSwLgvNGEnwxc"
+        },
+        {
             "nome": "QA SENIOR PRO MAX",
             "email": "ALIENTESTE@qa.com.br",
             "password": "teste",
             "administrador": "true",
             "_id": "6UgqmE6UwLEiqNtL"
+        },
+        {
+            "nome": "João Silva 90bf0",
+            "email": "joaoe0a636fd@test.com",
+            "password": "senha123456",
+            "administrador": "true",
+            "_id": "6VOFMcIZaG5eKxM2"
+        },
+        {
+            "nome": "João Silva dcca1",
+            "email": "joaoff542c0d@test.com",
+            "password": "senha123456",
+            "administrador": "true",
+            "_id": "6pzKgWuqjP3oM5rz"
+        },
+        {
+            "nome": "Usuario Auth",
+            "email": "auth_wkBBCQnS@qa.com",
+            "password": "123456",
+            "administrador": "true",
+            "_id": "6yQBu2vWVcuLNJQj"
+        },
+        {
+            "nome": "João Silva 2ba48",
+            "email": "joaobe82942b@test.com",
+            "password": "senha123456",
+            "administrador": "true",
+            "_id": "7DIOPDXw8DW0IQQA"
+        },
+        {
+            "nome": "Usuario Original",
+            "email": "duplicado_jEIIsAjG@qa.com",
+            "password": "123456",
+            "administrador": "true",
+            "_id": "7aTJxMculhGwfR3v"
+        },
+        {
+            "nome": "Nome Atualizado",
+            "email": "joao41f5ce86@test.com",
+            "password": "senha123456",
+            "administrador": "false",
+            "_id": "7an1ZgOGO00vSr9m"
+        },
+        {
+            "nome": "Nome Atualizado",
+            "email": "joao05402062@test.com",
+            "password": "senha123456",
+            "administrador": "false",
+            "_id": "7rDusZj6uBxolfYZ"
+        },
+        {
+            "nome": "Nome Atualizado",
+            "email": "joao50985376@test.com",
+            "password": "senha123456",
+            "administrador": "false",
+            "_id": "8MrJXHPMJHRLQMSA"
+        },
+        {
+            "nome": "Novo Nome Teste",
+            "email": "joaod7236d74@test.com",
+            "password": "senha123456",
+            "administrador": "true",
+            "_id": "8U5ISR0mstZXHG7a"
+        },
+        {
+            "nome": "Usuario Original",
+            "email": "duplicado_htUCXxHw@qa.com",
+            "password": "123456",
+            "administrador": "true",
+            "_id": "8Yq8f6aeCniqKfYB"
+        },
+        {
+            "nome": "João Silva e2b16",
+            "email": "joao5233ef06@test.com",
+            "password": "senha123456",
+            "administrador": "true",
+            "_id": "9GKB7xo5FZ7Dcnd0"
         },
         {
             "nome": "Jaqueline",
@@ -74,11 +256,81 @@
             "_id": "9RnL6aZxyolE7I65"
         },
         {
+            "nome": "João Silva f8348",
+            "email": "joaoc1d1220f@test.com",
+            "password": "senha123456",
+            "administrador": "true",
+            "_id": "9T2vIAdbLeIaQnqK"
+        },
+        {
+            "nome": "João Silva 936d7",
+            "email": "joao60085721@test.com",
+            "password": "senha123456",
+            "administrador": "true",
+            "_id": "9fbsBV1MS2MmEagX"
+        },
+        {
+            "nome": "João Silva 3aba6",
+            "email": "joao1b20dc50@test.com",
+            "password": "senha123456",
+            "administrador": "true",
+            "_id": "BJKAwUImfYLT4HXp"
+        },
+        {
+            "nome": "Nome Atualizado",
+            "email": "joao7ca414a3@test.com",
+            "password": "senha123456",
+            "administrador": "false",
+            "_id": "BZ7hLFUZX2FcuT1B"
+        },
+        {
             "nome": "new_admin23",
             "email": "new_usuario_23@qa.com",
             "password": "new_123456",
             "administrador": "true",
             "_id": "Bx63KCSI1a3gyQNb"
+        },
+        {
+            "nome": "João Silva 362ee",
+            "email": "joao5de86ed3@test.com",
+            "password": "senha123456",
+            "administrador": "true",
+            "_id": "C2in7D7sVYuvmcGN"
+        },
+        {
+            "nome": "João Silva dc6d3",
+            "email": "joao8297c554@test.com",
+            "password": "senha123456",
+            "administrador": "true",
+            "_id": "DmWWWpWEFbO9ZHtc"
+        },
+        {
+            "nome": "Nome Atualizado",
+            "email": "joao34939c23@test.com",
+            "password": "senha123456",
+            "administrador": "false",
+            "_id": "Dol5x9ohOuaniezR"
+        },
+        {
+            "nome": "Admin User 92960",
+            "email": "admin53ed372b@test.com",
+            "password": "admin123456",
+            "administrador": "true",
+            "_id": "E2ftyIt2iaMNhzWW"
+        },
+        {
+            "nome": "João Silva 32aaa",
+            "email": "joaof61d6f78@test.com",
+            "password": "senha123456",
+            "administrador": "true",
+            "_id": "EHVwFbmwzUAhbnGE"
+        },
+        {
+            "nome": "Regular User b29e2",
+            "email": "userc5284681@test.com",
+            "password": "user123456",
+            "administrador": "false",
+            "_id": "EQc3mRDFwOZmZPtm"
         },
         {
             "nome": "Luis Henrique",
@@ -88,847 +340,827 @@
             "_id": "EwTW7aF5dJ8RvelY"
         },
         {
-            "nome": "Teste Update Inexistente",
-            "email": "inexistente1769684642@qa.com",
-            "password": "exemple123",
-            "administrador": "true",
-            "_id": "IYEV1kcKemP99XHs"
-        },
-        {
-            "nome": "Teste Renan",
-            "email": "renan.teste@teste.com.br",
-            "password": "teste123",
-            "administrador": "true",
-            "_id": "KtAqLv505yUKmJt5"
-        },
-        {
-            "nome": "Carla Medhurst",
-            "email": "erikhuel@test.com",
-            "password": "Test;123",
-            "administrador": "true",
-            "_id": "Nv29eJmJprXYyIl1"
-        },
-        {
-            "nome": "Ed Ribeiro",
-            "email": "edribe@qa.com.br",
-            "password": "teste",
-            "administrador": "true",
-            "_id": "Qth8awRrGdBgksun"
-        },
-        {
-            "nome": "Javier Kunze",
-            "email": "javierkunze@test.com",
-            "password": "Test;123",
+            "nome": "Regular User 971a6",
+            "email": "user7876acbf@test.com",
+            "password": "user123456",
             "administrador": "false",
-            "_id": "S6ZRRv7B3uNU1zcG"
+            "_id": "FKHT5GncQ8cu2MrB"
         },
         {
-            "nome": "Ms. Leonard Harber",
-            "email": "ms.leonardharber@test.com",
-            "password": "Test;123",
-            "administrador": "true",
-            "_id": "SHqwS8CWaf2Slyn0"
-        },
-        {
-            "nome": "Wadson da Silva",
-            "email": "wadson@qa.com.br",
-            "password": "teste",
-            "administrador": "true",
-            "_id": "T2RERSA8mZL6wUTs"
-        },
-        {
-            "nome": "samuel dos santos  ",
-            "email": "samuelsantos3665@gmail.com",
-            "password": "senha2026",
-            "administrador": "true",
-            "_id": "WZ3vkJyvHlMhjLpl"
-        },
-        {
-            "nome": "Sallie.Cole",
-            "email": "Odell33@yahoo.com",
-            "password": "729230091",
-            "administrador": "true",
-            "_id": "ZYREHDoVuE6fqeBw"
-        },
-        {
-            "nome": "admin55",
-            "email": "usuario_55@qa.com",
-            "password": "123456",
-            "administrador": "true",
-            "_id": "dLCASr2Mg6JFuSc4"
-        },
-        {
-            "nome": "Alexis Schroeder",
-            "email": "alexisschroeder@test.com",
-            "password": "Test;123",
-            "administrador": "false",
-            "_id": "fd1GxMLKI6KwJKsy"
-        },
-        {
-            "nome": "Mervin",
-            "email": "clinton.langworth@gmail.com",
-            "password": "fymcb3ivteti4",
-            "administrador": "true",
-            "_id": "le350ur5UrbSoMb8"
-        },
-        {
-            "nome": "new_admin56",
-            "email": "new_usuario_56@qa.com",
-            "password": "new_123456",
-            "administrador": "true",
-            "_id": "mD7UUEwmJsh7Iain"
-        },
-        {
-            "nome": "Julian Vandervort",
-            "email": "julianvandervort@test.com",
-            "password": "Test;123",
-            "administrador": "true",
-            "_id": "pa30fZ0ApOJF8KjW"
-        },
-        {
-            "nome": "Elaine Kiehn",
-            "email": "elainekiehn@test.com",
-            "password": "Test;123",
-            "administrador": "true",
-            "_id": "vEdltk2E0d5Q02QL"
-        },
-        {
-            "nome": "Admin QA",
-            "email": "adminqa@teste.com",
-            "password": "senha123",
-            "administrador": "true",
-            "_id": "vVW095CxGTcvaZks"
-        },
-        {
-            "nome": "henrique",
-            "email": "henrique@gmail.com",
-            "password": "12345",
-            "administrador": "false",
-            "_id": "wjV60BwMl5UB2hrn"
-        }
-    ]
-} 
+            "nome": "Admin User a0fc0",
+            "email": "admi... (set the log level to DEBUG or TRACE to see the full content) 
  </msg>
-<msg time="2026-01-29T11:06:09.228489" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<msg time="2026-01-29T12:29:27.729966" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
 <var>${resp}</var>
 <arg>httpbin</arg>
 <arg>${BASE_URL}${list_users}</arg>
 <arg>headers=${headers}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-01-29T11:06:08.270466" elapsed="0.958046"/>
+<status status="PASS" start="2026-01-29T12:29:26.942266" elapsed="0.787719"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>'${resp.status_code}'=='200'</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.228712" elapsed="0.000712"/>
+<status status="PASS" start="2026-01-29T12:29:27.730155" elapsed="0.000622"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-01-29T11:06:09.229917" level="INFO">${json} = {'quantidade': 25, 'usuarios': [{'nome': 'Fulano da Silva', 'email': 'fulano@qa.com', 'password': 'teste', 'administrador': 'true', '_id': '0uxuPY0cbmQhpEz1'}, {'nome': 'Fulano da Silva', 'email': 'be...</msg>
+<msg time="2026-01-29T12:29:27.731512" level="INFO">${json} = {'quantidade': 161, 'usuarios': [{'nome': 'Nome Atualizado', 'email': 'joaod059c0eb@test.com', 'password': 'senha123456', 'administrador': 'false', '_id': '0ViWNvvU97GwKhMD'}, {'nome': 'João Silva fa5...</msg>
 <var>${json}</var>
 <arg>${resp.json()}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.229505" elapsed="0.000436"/>
+<status status="PASS" start="2026-01-29T12:29:27.730866" elapsed="0.000667"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2026-01-29T11:06:09.230170" level="INFO">${quant} = 25</msg>
+<msg time="2026-01-29T12:29:27.731713" level="INFO">${quant} = 161</msg>
 <var>${quant}</var>
 <arg>${json}</arg>
 <arg>quantidade</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.230040" elapsed="0.000148"/>
+<status status="PASS" start="2026-01-29T12:29:27.731611" elapsed="0.000116"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2026-01-29T11:06:09.230729" level="INFO">${quant} = 25</msg>
+<msg time="2026-01-29T12:29:27.731968" level="INFO">${quant} = 161</msg>
 <arg>${quant}</arg>
 <arg>${quant}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.230386" elapsed="0.000397"/>
+<status status="PASS" start="2026-01-29T12:29:27.731802" elapsed="0.000189"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>\n</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.230888" elapsed="0.000207"/>
+<status status="PASS" start="2026-01-29T12:29:27.732055" elapsed="0.000133"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>==============================================================================</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.231182" elapsed="0.000154"/>
+<status status="PASS" start="2026-01-29T12:29:27.732250" elapsed="0.000108"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Listando a quantidade de Usuários da Plataforma</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.231413" elapsed="0.000130"/>
+<status status="PASS" start="2026-01-29T12:29:27.732417" elapsed="0.000097"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>==============================================================================</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.231616" elapsed="0.000147"/>
+<status status="PASS" start="2026-01-29T12:29:27.732570" elapsed="0.000098"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>\n...Total de Usuários: ${quant}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.231816" elapsed="0.000132"/>
+<status status="PASS" start="2026-01-29T12:29:27.732724" elapsed="0.000116"/>
 </kw>
-<status status="PASS" start="2026-01-29T11:06:08.269496" elapsed="0.962496"/>
+<status status="PASS" start="2026-01-29T12:29:26.941324" elapsed="0.791555"/>
 </kw>
 <kw name="E ppreencha os dados para criação de novo usuário" owner="kws_users_tests_api">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-01-29T11:06:09.232430" level="INFO">${num} = 14</msg>
+<msg time="2026-01-29T12:29:27.733271" level="INFO">${num} = 6</msg>
 <var>${num}</var>
 <arg>random.randint(1, 100)</arg>
 <arg>modules=random</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.232252" elapsed="0.000194"/>
+<status status="PASS" start="2026-01-29T12:29:27.733120" elapsed="0.000164"/>
 </kw>
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2026-01-29T11:06:09.232661" level="INFO">Creating Session using : alias=httpbin, url=https://serverest.dev, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2026-01-29T12:29:27.733438" level="INFO">Creating Session using : alias=httpbin, url=https://serverest.dev, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>httpbin</arg>
 <arg>${BASE_URL}</arg>
 <arg>disable_warnings=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-01-29T11:06:09.232519" elapsed="0.000281"/>
+<status status="PASS" start="2026-01-29T12:29:27.733337" elapsed="0.000208"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-01-29T11:06:09.233049" level="INFO">${headers} = {'Authorization': ''}</msg>
+<msg time="2026-01-29T12:29:27.733762" level="INFO">${headers} = {'Authorization': ''}</msg>
 <var>${headers}</var>
 <arg>Authorization=</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.232882" elapsed="0.000184"/>
+<status status="PASS" start="2026-01-29T12:29:27.733612" elapsed="0.000165"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-01-29T11:06:09.233346" level="INFO">${payload} = {'nome': 'admin14', 'email': 'usuario_14@qa.com', 'password': '123456', 'administrador': 'true'}</msg>
+<msg time="2026-01-29T12:29:27.734018" level="INFO">${payload} = {'nome': 'admin6', 'email': 'usuario_6@qa.com', 'password': '123456', 'administrador': 'true'}</msg>
 <var>${payload}</var>
 <arg>nome=admin${num}</arg>
 <arg>email=usuario_${num}@qa.com</arg>
 <arg>password=123456</arg>
 <arg>administrador=true</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.233140" elapsed="0.000223"/>
+<status status="PASS" start="2026-01-29T12:29:27.733838" elapsed="0.000195"/>
 </kw>
 <kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2026-01-29T11:06:09.574626" level="INFO">POST Request : url=https://serverest.dev/usuarios 
+<msg time="2026-01-29T12:29:28.099181" level="INFO">POST Request : url=https://serverest.dev/usuarios 
  path_url=/usuarios 
- headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': '', 'Content-Length': '96', 'Content-Type': 'application/json'} 
- body=b'{"nome": "admin14", "email": "usuario_14@qa.com", "password": "123456", "administrador": "true"}' 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': '', 'Content-Length': '94', 'Content-Type': 'application/json'} 
+ body=b'{"nome": "admin6", "email": "usuario_6@qa.com", "password": "123456", "administrador": "true"}' 
  </msg>
-<msg time="2026-01-29T11:06:09.574831" level="INFO">POST Response : url=https://serverest.dev/usuarios 
+<msg time="2026-01-29T12:29:28.099294" level="INFO">POST Response : url=https://serverest.dev/usuarios 
  status=201, reason=Created 
- headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'x-cloud-trace-context': '80cfedb5cd983feda01e5f8df67e0217', 'date': 'Thu, 29 Jan 2026 14:06:09 GMT', 'server': 'Google Frontend', 'Content-Length': '82'} 
+ headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'x-cloud-trace-context': 'e0100db06de1f4b5d8c16668b595129a', 'date': 'Thu, 29 Jan 2026 15:29:28 GMT', 'server': 'Google Frontend', 'Content-Length': '82'} 
  body={
     "message": "Cadastro realizado com sucesso",
-    "_id": "d7owrmV3tqA2ck4X"
+    "_id": "KodsedID3qHaUzsP"
 } 
  </msg>
-<msg time="2026-01-29T11:06:09.575205" level="INFO">${resp} = &lt;Response [201]&gt;</msg>
+<msg time="2026-01-29T12:29:28.099427" level="INFO">${resp} = &lt;Response [201]&gt;</msg>
 <var>${resp}</var>
 <arg>httpbin</arg>
 <arg>${BASE_URL}${cad_users}</arg>
 <arg>json=${payload}</arg>
 <arg>headers=${headers}</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.233433" elapsed="0.341837"/>
+<status status="PASS" start="2026-01-29T12:29:27.734095" elapsed="0.365354"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>'${resp.status_code}'=='201'</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.575667" elapsed="0.001460"/>
+<status status="PASS" start="2026-01-29T12:29:28.099654" elapsed="0.000857"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-01-29T11:06:09.577919" level="INFO">${json} = {'message': 'Cadastro realizado com sucesso', '_id': 'd7owrmV3tqA2ck4X'}</msg>
+<msg time="2026-01-29T12:29:28.101232" level="INFO">${json} = {'message': 'Cadastro realizado com sucesso', '_id': 'KodsedID3qHaUzsP'}</msg>
 <var>${json}</var>
 <arg>${resp.json()}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.577283" elapsed="0.000676"/>
+<status status="PASS" start="2026-01-29T12:29:28.100643" elapsed="0.000613"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2026-01-29T11:06:09.578301" level="INFO">${ID} = d7owrmV3tqA2ck4X</msg>
+<msg time="2026-01-29T12:29:28.101469" level="INFO">${ID} = KodsedID3qHaUzsP</msg>
 <var>${ID}</var>
 <arg>${json}</arg>
 <arg>_id</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.578124" elapsed="0.000206"/>
+<status status="PASS" start="2026-01-29T12:29:28.101352" elapsed="0.000135"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2026-01-29T11:06:09.578785" level="INFO">${ID} = d7owrmV3tqA2ck4X</msg>
+<msg time="2026-01-29T12:29:28.101798" level="INFO">${ID} = KodsedID3qHaUzsP</msg>
 <arg>${ID}</arg>
 <arg>${ID}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.578466" elapsed="0.000360"/>
+<status status="PASS" start="2026-01-29T12:29:28.101581" elapsed="0.000247"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>\n</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.578917" elapsed="0.000182"/>
+<status status="PASS" start="2026-01-29T12:29:28.101907" elapsed="0.000175"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>==============================================================================</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.579177" elapsed="0.000164"/>
+<status status="PASS" start="2026-01-29T12:29:28.102158" elapsed="0.000145"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Usuário criado com sucesso!!!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.579426" elapsed="0.000146"/>
+<status status="PASS" start="2026-01-29T12:29:28.102399" elapsed="0.000123"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>==============================================================================</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.579680" elapsed="0.000192"/>
+<status status="PASS" start="2026-01-29T12:29:28.102594" elapsed="0.000130"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>\n...Usuário criado com Sucesso com o ID: ${ID}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.580003" elapsed="0.000209"/>
+<status status="PASS" start="2026-01-29T12:29:28.102793" elapsed="0.000152"/>
 </kw>
-<status status="PASS" start="2026-01-29T11:06:09.232130" elapsed="0.348153"/>
+<status status="PASS" start="2026-01-29T12:29:27.733008" elapsed="0.370005"/>
 </kw>
 <kw name="Quando alterar os dados do usuário criado" owner="kws_users_tests_api">
 <kw name="Listar Usuario pelo ID" owner="kws_users_tests_api">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2026-01-29T11:06:09.581207" level="INFO">Creating Session using : alias=httpbin, url=https://serverest.dev, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2026-01-29T12:29:28.103799" level="INFO">Creating Session using : alias=httpbin, url=https://serverest.dev, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>httpbin</arg>
 <arg>${BASE_URL}</arg>
 <arg>disable_warnings=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-01-29T11:06:09.581007" elapsed="0.000377"/>
+<status status="PASS" start="2026-01-29T12:29:28.103620" elapsed="0.000350"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-01-29T11:06:09.581721" level="INFO">${headers} = {'Authorization': ''}</msg>
+<msg time="2026-01-29T12:29:28.104280" level="INFO">${headers} = {'Authorization': ''}</msg>
 <var>${headers}</var>
 <arg>Authorization=</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.581487" elapsed="0.000255"/>
+<status status="PASS" start="2026-01-29T12:29:28.104070" elapsed="0.000228"/>
 </kw>
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2026-01-29T11:06:09.935904" level="INFO">GET Request : url=https://serverest.dev/usuarios/d7owrmV3tqA2ck4X 
- path_url=/usuarios/d7owrmV3tqA2ck4X 
+<msg time="2026-01-29T12:29:28.450321" level="INFO">GET Request : url=https://serverest.dev/usuarios/KodsedID3qHaUzsP 
+ path_url=/usuarios/KodsedID3qHaUzsP 
  headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': ''} 
  body=None 
  </msg>
-<msg time="2026-01-29T11:06:09.936107" level="INFO">GET Response : url=https://serverest.dev/usuarios/d7owrmV3tqA2ck4X 
+<msg time="2026-01-29T12:29:28.450438" level="INFO">GET Response : url=https://serverest.dev/usuarios/KodsedID3qHaUzsP 
  status=200, reason=OK 
- headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'x-cloud-trace-context': '59afc17dcab0109a73a7f7d47ec894ec', 'date': 'Thu, 29 Jan 2026 14:06:09 GMT', 'server': 'Google Frontend', 'Content-Length': '145'} 
+ headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'x-cloud-trace-context': 'bec54ac780b2934d3e1c895e974bee80', 'date': 'Thu, 29 Jan 2026 15:29:28 GMT', 'server': 'Google Frontend', 'Content-Length': '143'} 
  body={
-    "nome": "admin14",
-    "email": "usuario_14@qa.com",
+    "nome": "admin6",
+    "email": "usuario_6@qa.com",
     "password": "123456",
     "administrador": "true",
-    "_id": "d7owrmV3tqA2ck4X"
+    "_id": "KodsedID3qHaUzsP"
 } 
  </msg>
-<msg time="2026-01-29T11:06:09.936347" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<msg time="2026-01-29T12:29:28.450585" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
 <var>${resp}</var>
 <arg>httpbin</arg>
 <arg>${BASE_URL}${list_users}/${ID}</arg>
 <arg>headers=${headers}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.581833" elapsed="0.354569"/>
+<status status="PASS" start="2026-01-29T12:29:28.104386" elapsed="0.346223"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>'${resp.status_code}'=='200'</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.936747" elapsed="0.001106"/>
+<status status="PASS" start="2026-01-29T12:29:28.450822" elapsed="0.000903"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-01-29T11:06:09.938433" level="INFO">${json} = {'nome': 'admin14', 'email': 'usuario_14@qa.com', 'password': '123456', 'administrador': 'true', '_id': 'd7owrmV3tqA2ck4X'}</msg>
+<msg time="2026-01-29T12:29:28.452297" level="INFO">${json} = {'nome': 'admin6', 'email': 'usuario_6@qa.com', 'password': '123456', 'administrador': 'true', '_id': 'KodsedID3qHaUzsP'}</msg>
 <var>${json}</var>
 <arg>${resp.json()}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.937995" elapsed="0.000475"/>
+<status status="PASS" start="2026-01-29T12:29:28.451856" elapsed="0.000465"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2026-01-29T11:06:09.938814" level="INFO">${nome} = admin14</msg>
+<msg time="2026-01-29T12:29:28.452558" level="INFO">${nome} = admin6</msg>
 <var>${nome}</var>
 <arg>${json}</arg>
 <arg>nome</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.938628" elapsed="0.000214"/>
+<status status="PASS" start="2026-01-29T12:29:28.452429" elapsed="0.000146"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2026-01-29T11:06:09.939133" level="INFO">${email} = usuario_14@qa.com</msg>
+<msg time="2026-01-29T12:29:28.452748" level="INFO">${email} = usuario_6@qa.com</msg>
 <var>${email}</var>
 <arg>${json}</arg>
 <arg>email</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.938971" elapsed="0.000190"/>
+<status status="PASS" start="2026-01-29T12:29:28.452654" elapsed="0.000110"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2026-01-29T11:06:09.939444" level="INFO">${password} = 123456</msg>
+<msg time="2026-01-29T12:29:28.452927" level="INFO">${password} = 123456</msg>
 <var>${password}</var>
 <arg>${json}</arg>
 <arg>password</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.939284" elapsed="0.000190"/>
+<status status="PASS" start="2026-01-29T12:29:28.452835" elapsed="0.000111"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2026-01-29T11:06:09.939749" level="INFO">${id} = d7owrmV3tqA2ck4X</msg>
+<msg time="2026-01-29T12:29:28.453117" level="INFO">${id} = KodsedID3qHaUzsP</msg>
 <var>${id}</var>
 <arg>${json}</arg>
 <arg>_id</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.939596" elapsed="0.000183"/>
+<status status="PASS" start="2026-01-29T12:29:28.453026" elapsed="0.000107"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2026-01-29T11:06:09.940300" level="INFO">${nome} = admin14</msg>
+<msg time="2026-01-29T12:29:28.453442" level="INFO">${nome} = admin6</msg>
 <arg>${nome}</arg>
 <arg>${nome}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.939930" elapsed="0.000417"/>
+<status status="PASS" start="2026-01-29T12:29:28.453221" elapsed="0.000250"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2026-01-29T11:06:09.940709" level="INFO">${email} = usuario_14@qa.com</msg>
+<msg time="2026-01-29T12:29:28.453741" level="INFO">${email} = usuario_6@qa.com</msg>
 <arg>${email}</arg>
 <arg>${email}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.940465" elapsed="0.000279"/>
+<status status="PASS" start="2026-01-29T12:29:28.453556" elapsed="0.000213"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2026-01-29T11:06:09.941083" level="INFO">${password} = 123456</msg>
+<msg time="2026-01-29T12:29:28.454055" level="INFO">${password} = 123456</msg>
 <arg>${password}</arg>
 <arg>${password}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.940845" elapsed="0.000272"/>
+<status status="PASS" start="2026-01-29T12:29:28.453853" elapsed="0.000253"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2026-01-29T11:06:09.941447" level="INFO">${id} = d7owrmV3tqA2ck4X</msg>
+<msg time="2026-01-29T12:29:28.454582" level="INFO">${id} = KodsedID3qHaUzsP</msg>
 <arg>${id}</arg>
 <arg>${id}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.941220" elapsed="0.000261"/>
+<status status="PASS" start="2026-01-29T12:29:28.454252" elapsed="0.000382"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>\n</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.941579" elapsed="0.000241"/>
+<status status="PASS" start="2026-01-29T12:29:28.454784" elapsed="0.000332"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>==============================================================================</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.941921" elapsed="0.000177"/>
+<status status="PASS" start="2026-01-29T12:29:28.455257" elapsed="0.000222"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Listando Usuário criado pelo ID!!!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.942196" elapsed="0.000164"/>
+<status status="PASS" start="2026-01-29T12:29:28.455596" elapsed="0.000211"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>==============================================================================</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.942450" elapsed="0.000142"/>
+<status status="PASS" start="2026-01-29T12:29:28.455926" elapsed="0.000217"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>\n..Usuário: ${nome}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.942675" elapsed="0.000183"/>
+<status status="PASS" start="2026-01-29T12:29:28.456262" elapsed="0.000260"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>...Email: ${email}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.942941" elapsed="0.000160"/>
+<status status="PASS" start="2026-01-29T12:29:28.456641" elapsed="0.000230"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Password: ${password}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.943185" elapsed="0.000168"/>
+<status status="PASS" start="2026-01-29T12:29:28.456974" elapsed="0.000204"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>......ID: ${id}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.943436" elapsed="0.000159"/>
+<status status="PASS" start="2026-01-29T12:29:28.457250" elapsed="0.000144"/>
 </kw>
-<status status="PASS" start="2026-01-29T11:06:09.580838" elapsed="0.362837"/>
+<status status="PASS" start="2026-01-29T12:29:28.103475" elapsed="0.353974"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-01-29T11:06:09.944046" level="INFO">${num} = 92</msg>
+<msg time="2026-01-29T12:29:28.457824" level="INFO">${num} = 8</msg>
 <var>${num}</var>
 <arg>random.randint(1, 100)</arg>
 <arg>modules=random</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.943767" elapsed="0.000300"/>
+<status status="PASS" start="2026-01-29T12:29:28.457529" elapsed="0.000320"/>
 </kw>
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2026-01-29T11:06:09.944348" level="INFO">Creating Session using : alias=httpbin, url=https://serverest.dev, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2026-01-29T12:29:28.458133" level="INFO">Creating Session using : alias=httpbin, url=https://serverest.dev, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>httpbin</arg>
 <arg>${BASE_URL}</arg>
 <arg>disable_warnings=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-01-29T11:06:09.944165" elapsed="0.000352"/>
+<status status="PASS" start="2026-01-29T12:29:28.457949" elapsed="0.000367"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-01-29T11:06:09.944783" level="INFO">${headers} = {'Authorization': ''}</msg>
+<msg time="2026-01-29T12:29:28.458647" level="INFO">${headers} = {'Authorization': ''}</msg>
 <var>${headers}</var>
 <arg>Authorization=</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.944604" elapsed="0.000197"/>
+<status status="PASS" start="2026-01-29T12:29:28.458426" elapsed="0.000242"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-01-29T11:06:09.945123" level="INFO">${payload} = {'nome': 'new_admin14', 'email': 'new_usuario_14@qa.com', 'password': 'new_123456', 'administrador': 'true'}</msg>
+<msg time="2026-01-29T12:29:28.459061" level="INFO">${payload} = {'nome': 'new_admin6', 'email': 'new_usuario_6@qa.com', 'password': 'new_123456', 'administrador': 'true'}</msg>
 <var>${payload}</var>
 <arg>nome=new_${nome}</arg>
 <arg>email=new_${email}</arg>
 <arg>password=new_${password}</arg>
 <arg>administrador=true</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.944876" elapsed="0.000272"/>
+<status status="PASS" start="2026-01-29T12:29:28.458761" elapsed="0.000324"/>
 </kw>
 <kw name="PUT On Session" owner="RequestsLibrary">
-<msg time="2026-01-29T11:06:10.800987" level="INFO">PUT Request : url=https://serverest.dev/usuarios/d7owrmV3tqA2ck4X 
- path_url=/usuarios/d7owrmV3tqA2ck4X 
- headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': '', 'Content-Length': '108', 'Content-Type': 'application/json'} 
- body=b'{"nome": "new_admin14", "email": "new_usuario_14@qa.com", "password": "new_123456", "administrador": "true"}' 
+<msg time="2026-01-29T12:29:28.804778" level="INFO">PUT Request : url=https://serverest.dev/usuarios/KodsedID3qHaUzsP 
+ path_url=/usuarios/KodsedID3qHaUzsP 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': '', 'Content-Length': '106', 'Content-Type': 'application/json'} 
+ body=b'{"nome": "new_admin6", "email": "new_usuario_6@qa.com", "password": "new_123456", "administrador": "true"}' 
  </msg>
-<msg time="2026-01-29T11:06:10.801198" level="INFO">PUT Response : url=https://serverest.dev/usuarios/d7owrmV3tqA2ck4X 
+<msg time="2026-01-29T12:29:28.804970" level="INFO">PUT Response : url=https://serverest.dev/usuarios/KodsedID3qHaUzsP 
  status=200, reason=OK 
- headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'x-cloud-trace-context': '49b2dcaac111a54830812a7fb67e4030', 'date': 'Thu, 29 Jan 2026 14:06:10 GMT', 'server': 'Google Frontend', 'Content-Length': '50'} 
+ headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'x-cloud-trace-context': '3af0a55a44edeb8e1742cf72bc166a12', 'date': 'Thu, 29 Jan 2026 15:29:28 GMT', 'server': 'Google Frontend', 'Content-Length': '50'} 
  body={
     "message": "Registro alterado com sucesso"
 } 
  </msg>
-<msg time="2026-01-29T11:06:10.801442" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<msg time="2026-01-29T12:29:28.805210" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
 <var>${resp}</var>
 <arg>httpbin</arg>
 <arg>${BASE_URL}${list_users}/${ID}</arg>
 <arg>json=${payload}</arg>
 <arg>headers=${headers}</arg>
 <doc>Sends a PUT request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-01-29T11:06:09.945228" elapsed="0.856278"/>
+<status status="PASS" start="2026-01-29T12:29:28.459182" elapsed="0.346078"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>'${resp.status_code}'=='200'</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-01-29T11:06:10.801919" elapsed="0.001663"/>
+<status status="PASS" start="2026-01-29T12:29:28.805617" elapsed="0.000868"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-01-29T11:06:10.804382" level="INFO">${json} = {'message': 'Registro alterado com sucesso'}</msg>
+<msg time="2026-01-29T12:29:28.807114" level="INFO">${json} = {'message': 'Registro alterado com sucesso'}</msg>
 <var>${json}</var>
 <arg>${resp.json()}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-01-29T11:06:10.803749" elapsed="0.000668"/>
+<status status="PASS" start="2026-01-29T12:29:28.806598" elapsed="0.000548"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2026-01-29T11:06:10.804755" level="INFO">${message} = Registro alterado com sucesso</msg>
+<msg time="2026-01-29T12:29:28.807403" level="INFO">${message} = Registro alterado com sucesso</msg>
 <var>${message}</var>
 <arg>${json}</arg>
 <arg>message</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2026-01-29T11:06:10.804565" elapsed="0.000222"/>
+<status status="PASS" start="2026-01-29T12:29:28.807271" elapsed="0.000155"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2026-01-29T11:06:10.805281" level="INFO">${message} = Registro alterado com sucesso</msg>
+<msg time="2026-01-29T12:29:28.807764" level="INFO">${message} = Registro alterado com sucesso</msg>
 <arg>${message}</arg>
 <arg>${message}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2026-01-29T11:06:10.804961" elapsed="0.000364"/>
+<status status="PASS" start="2026-01-29T12:29:28.807529" elapsed="0.000264"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>\n</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:10.805453" elapsed="0.000231"/>
+<status status="PASS" start="2026-01-29T12:29:28.807872" elapsed="0.000176"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>==============================================================================</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:10.805781" elapsed="0.000198"/>
+<status status="PASS" start="2026-01-29T12:29:28.808120" elapsed="0.000141"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Alteração de Usuário com sucesso!!!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:10.806075" elapsed="0.000176"/>
+<status status="PASS" start="2026-01-29T12:29:28.808332" elapsed="0.000128"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>==============================================================================</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:10.806347" elapsed="0.000174"/>
+<status status="PASS" start="2026-01-29T12:29:28.808531" elapsed="0.000129"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>\n..Mensagem: ${message}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:10.806619" elapsed="0.000212"/>
+<status status="PASS" start="2026-01-29T12:29:28.808731" elapsed="0.000147"/>
 </kw>
-<status status="PASS" start="2026-01-29T11:06:09.580549" elapsed="1.226354"/>
+<status status="PASS" start="2026-01-29T12:29:28.103226" elapsed="0.705709"/>
 </kw>
-<kw name="Então ser1a possível realizar login com os novos dados" owner="kws_users_tests_api">
+<kw name="Então será possível realizar login com os novos dados" owner="kws_users_tests_api">
 <kw name="Listar Usuario pelo ID" owner="kws_users_tests_api">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2026-01-29T11:06:10.807798" level="INFO">Creating Session using : alias=httpbin, url=https://serverest.dev, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2026-01-29T12:29:28.809662" level="INFO">Creating Session using : alias=httpbin, url=https://serverest.dev, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>httpbin</arg>
 <arg>${BASE_URL}</arg>
 <arg>disable_warnings=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-01-29T11:06:10.807596" elapsed="0.000399"/>
+<status status="PASS" start="2026-01-29T12:29:28.809501" elapsed="0.000299"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-01-29T11:06:10.808338" level="INFO">${headers} = {'Authorization': ''}</msg>
+<msg time="2026-01-29T12:29:28.810046" level="INFO">${headers} = {'Authorization': ''}</msg>
 <var>${headers}</var>
 <arg>Authorization=</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-01-29T11:06:10.808103" elapsed="0.000295"/>
+<status status="PASS" start="2026-01-29T12:29:28.809882" elapsed="0.000180"/>
 </kw>
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2026-01-29T11:06:11.150414" level="INFO">GET Request : url=https://serverest.dev/usuarios/d7owrmV3tqA2ck4X 
- path_url=/usuarios/d7owrmV3tqA2ck4X 
+<msg time="2026-01-29T12:29:29.172152" level="INFO">GET Request : url=https://serverest.dev/usuarios/KodsedID3qHaUzsP 
+ path_url=/usuarios/KodsedID3qHaUzsP 
  headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': ''} 
  body=None 
  </msg>
-<msg time="2026-01-29T11:06:11.150534" level="INFO">GET Response : url=https://serverest.dev/usuarios/d7owrmV3tqA2ck4X 
+<msg time="2026-01-29T12:29:29.172352" level="INFO">GET Response : url=https://serverest.dev/usuarios/KodsedID3qHaUzsP 
  status=200, reason=OK 
- headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'x-cloud-trace-context': 'bad849877376dfd0a964718aceb4076f', 'date': 'Thu, 29 Jan 2026 14:06:11 GMT', 'server': 'Google Frontend', 'Content-Length': '157'} 
+ headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'x-cloud-trace-context': 'bf16da4ffc69ebe62ef9b1e1bd76355a', 'date': 'Thu, 29 Jan 2026 15:29:29 GMT', 'server': 'Google Frontend', 'Content-Length': '155'} 
  body={
-    "nome": "new_admin14",
-    "email": "new_usuario_14@qa.com",
+    "nome": "new_admin6",
+    "email": "new_usuario_6@qa.com",
     "password": "new_123456",
     "administrador": "true",
-    "_id": "d7owrmV3tqA2ck4X"
+    "_id": "KodsedID3qHaUzsP"
 } 
  </msg>
-<msg time="2026-01-29T11:06:11.150680" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<msg time="2026-01-29T12:29:29.172656" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
 <var>${resp}</var>
 <arg>httpbin</arg>
 <arg>${BASE_URL}${list_users}/${ID}</arg>
 <arg>headers=${headers}</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-01-29T11:06:10.808521" elapsed="0.342178"/>
+<status status="PASS" start="2026-01-29T12:29:28.810131" elapsed="0.362579"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>'${resp.status_code}'=='200'</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.150873" elapsed="0.001612"/>
+<status status="PASS" start="2026-01-29T12:29:29.173066" elapsed="0.001191"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-01-29T11:06:11.153106" level="INFO">${json} = {'nome': 'new_admin14', 'email': 'new_usuario_14@qa.com', 'password': 'new_123456', 'administrador': 'true', '_id': 'd7owrmV3tqA2ck4X'}</msg>
+<msg time="2026-01-29T12:29:29.175030" level="INFO">${json} = {'nome': 'new_admin6', 'email': 'new_usuario_6@qa.com', 'password': 'new_123456', 'administrador': 'true', '_id': 'KodsedID3qHaUzsP'}</msg>
 <var>${json}</var>
 <arg>${resp.json()}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.152685" elapsed="0.000443"/>
+<status status="PASS" start="2026-01-29T12:29:29.174380" elapsed="0.000688"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2026-01-29T11:06:11.153320" level="INFO">${nome} = new_admin14</msg>
+<msg time="2026-01-29T12:29:29.175389" level="INFO">${nome} = new_admin6</msg>
 <var>${nome}</var>
 <arg>${json}</arg>
 <arg>nome</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.153215" elapsed="0.000121"/>
+<status status="PASS" start="2026-01-29T12:29:29.175212" elapsed="0.000206"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2026-01-29T11:06:11.153512" level="INFO">${email} = new_usuario_14@qa.com</msg>
+<msg time="2026-01-29T12:29:29.175688" level="INFO">${email} = new_usuario_6@qa.com</msg>
 <var>${email}</var>
 <arg>${json}</arg>
 <arg>email</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.153416" elapsed="0.000120"/>
+<status status="PASS" start="2026-01-29T12:29:29.175544" elapsed="0.000166"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2026-01-29T11:06:11.153688" level="INFO">${password} = new_123456</msg>
+<msg time="2026-01-29T12:29:29.175885" level="INFO">${password} = new_123456</msg>
 <var>${password}</var>
 <arg>${json}</arg>
 <arg>password</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.153605" elapsed="0.000097"/>
+<status status="PASS" start="2026-01-29T12:29:29.175803" elapsed="0.000096"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2026-01-29T11:06:11.153846" level="INFO">${id} = d7owrmV3tqA2ck4X</msg>
+<msg time="2026-01-29T12:29:29.176040" level="INFO">${id} = KodsedID3qHaUzsP</msg>
 <var>${id}</var>
 <arg>${json}</arg>
 <arg>_id</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.153766" elapsed="0.000096"/>
+<status status="PASS" start="2026-01-29T12:29:29.175962" elapsed="0.000093"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2026-01-29T11:06:11.154139" level="INFO">${nome} = new_admin14</msg>
+<msg time="2026-01-29T12:29:29.176314" level="INFO">${nome} = new_admin6</msg>
 <arg>${nome}</arg>
 <arg>${nome}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.153941" elapsed="0.000223"/>
+<status status="PASS" start="2026-01-29T12:29:29.176129" elapsed="0.000209"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2026-01-29T11:06:11.154386" level="INFO">${email} = new_usuario_14@qa.com</msg>
+<msg time="2026-01-29T12:29:29.176595" level="INFO">${email} = new_usuario_6@qa.com</msg>
 <arg>${email}</arg>
 <arg>${email}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.154232" elapsed="0.000177"/>
+<status status="PASS" start="2026-01-29T12:29:29.176405" elapsed="0.000214"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2026-01-29T11:06:11.154626" level="INFO">${password} = new_123456</msg>
+<msg time="2026-01-29T12:29:29.176839" level="INFO">${password} = new_123456</msg>
 <arg>${password}</arg>
 <arg>${password}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.154476" elapsed="0.000172"/>
+<status status="PASS" start="2026-01-29T12:29:29.176687" elapsed="0.000175"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2026-01-29T11:06:11.154863" level="INFO">${id} = d7owrmV3tqA2ck4X</msg>
+<msg time="2026-01-29T12:29:29.177076" level="INFO">${id} = KodsedID3qHaUzsP</msg>
 <arg>${id}</arg>
 <arg>${id}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.154715" elapsed="0.000171"/>
+<status status="PASS" start="2026-01-29T12:29:29.176928" elapsed="0.000170"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>\n</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.154950" elapsed="0.000158"/>
+<status status="PASS" start="2026-01-29T12:29:29.177163" elapsed="0.000145"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>==============================================================================</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.155173" elapsed="0.000119"/>
+<status status="PASS" start="2026-01-29T12:29:29.177406" elapsed="0.000172"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Listando Usuário criado pelo ID!!!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.155367" elapsed="0.000109"/>
+<status status="PASS" start="2026-01-29T12:29:29.177668" elapsed="0.000143"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>==============================================================================</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.155538" elapsed="0.000110"/>
+<status status="PASS" start="2026-01-29T12:29:29.177891" elapsed="0.000142"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>\n..Usuário: ${nome}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.155710" elapsed="0.000128"/>
+<status status="PASS" start="2026-01-29T12:29:29.178115" elapsed="0.000187"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>...Email: ${email}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.155899" elapsed="0.000124"/>
+<status status="PASS" start="2026-01-29T12:29:29.178390" elapsed="0.000161"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Password: ${password}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.156085" elapsed="0.000124"/>
+<status status="PASS" start="2026-01-29T12:29:29.178641" elapsed="0.000160"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>......ID: ${id}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.156305" elapsed="0.000184"/>
+<status status="PASS" start="2026-01-29T12:29:29.178890" elapsed="0.000158"/>
 </kw>
-<status status="PASS" start="2026-01-29T11:06:10.807447" elapsed="0.349109"/>
+<status status="PASS" start="2026-01-29T12:29:28.809372" elapsed="0.369739"/>
 </kw>
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2026-01-29T11:06:11.156868" level="INFO">Creating Session using : alias=httpbin, url=https://serverest.dev, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2026-01-29T12:29:29.179378" level="INFO">Creating Session using : alias=httpbin, url=https://serverest.dev, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>httpbin</arg>
 <arg>${BASE_URL}</arg>
 <arg>disable_warnings=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-01-29T11:06:11.156657" elapsed="0.000403"/>
+<status status="PASS" start="2026-01-29T12:29:29.179198" elapsed="0.000338"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-01-29T11:06:11.157419" level="INFO">${headers} = {'Authorization': ''}</msg>
+<msg time="2026-01-29T12:29:29.179817" level="INFO">${headers} = {'Authorization': ''}</msg>
 <var>${headers}</var>
 <arg>Authorization=</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.157174" elapsed="0.000273"/>
+<status status="PASS" start="2026-01-29T12:29:29.179635" elapsed="0.000200"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-01-29T11:06:11.157792" level="INFO">${payload} = {'email': 'new_usuario_14@qa.com', 'password': 'new_123456'}</msg>
+<msg time="2026-01-29T12:29:29.180112" level="INFO">${payload} = {'email': 'new_usuario_6@qa.com', 'password': 'new_123456'}</msg>
 <var>${payload}</var>
 <arg>email=${email}</arg>
 <arg>password=${password}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.157542" elapsed="0.000270"/>
+<status status="PASS" start="2026-01-29T12:29:29.179909" elapsed="0.000221"/>
 </kw>
 <kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2026-01-29T11:06:11.516364" level="INFO">POST Request : url=https://serverest.dev/login 
+<msg time="2026-01-29T12:29:29.523066" level="INFO">POST Request : url=https://serverest.dev/login 
  path_url=/login 
- headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': '', 'Content-Length': '60', 'Content-Type': 'application/json'} 
- body=b'{"email": "new_usuario_14@qa.com", "password": "new_123456"}' 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': '', 'Content-Length': '59', 'Content-Type': 'application/json'} 
+ body=b'{"email": "new_usuario_6@qa.com", "password": "new_123456"}' 
  </msg>
-<msg time="2026-01-29T11:06:11.516578" level="INFO">POST Response : url=https://serverest.dev/login 
+<msg time="2026-01-29T12:29:29.523253" level="INFO">POST Response : url=https://serverest.dev/login 
  status=200, reason=OK 
- headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'x-cloud-trace-context': '5c734121cb974a585a1d829b86b894df', 'date': 'Thu, 29 Jan 2026 14:06:11 GMT', 'server': 'Google Frontend', 'Content-Length': '283'} 
+ headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'x-cloud-trace-context': '204ed407bd4cb60f43ca6b7d13fe539c', 'date': 'Thu, 29 Jan 2026 15:29:29 GMT', 'server': 'Google Frontend', 'Content-Length': '281'} 
  body={
     "message": "Login realizado com sucesso",
-    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5ld191c3VhcmlvXzE0QHFhLmNvbSIsInBhc3N3b3JkIjoibmV3XzEyMzQ1NiIsImlhdCI6MTc2OTY5NTU3MSwiZXhwIjoxNzY5Njk2MTcxfQ.zVJZJXHMO8rNgdJhXr2spOsAUT-iN00-Cco93n7_CIA"
+    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5ld191c3VhcmlvXzZAcWEuY29tIiwicGFzc3dvcmQiOiJuZXdfMTIzNDU2IiwiaWF0IjoxNzY5NzAwNTY5LCJleHAiOjE3Njk3MDExNjl9.kSuNEF66Lg78rZjqBHkxJnkNg2IQ34P5GMsZWM1cACg"
 } 
  </msg>
-<msg time="2026-01-29T11:06:11.516901" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<msg time="2026-01-29T12:29:29.523552" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
 <var>${resp}</var>
 <arg>httpbin</arg>
 <arg>${BASE_URL}${login}</arg>
 <arg>json=${payload}</arg>
 <arg>headers=${headers}</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.157900" elapsed="0.359052"/>
+<status status="PASS" start="2026-01-29T12:29:29.180205" elapsed="0.343400"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>'${resp.status_code}'=='200'</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.517304" elapsed="0.001403"/>
+<status status="PASS" start="2026-01-29T12:29:29.523897" elapsed="0.001055"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-01-29T11:06:11.519513" level="INFO">${json} = {'message': 'Login realizado com sucesso', 'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5ld191c3VhcmlvXzE0QHFhLmNvbSIsInBhc3N3b3JkIjoibmV3XzEyMzQ1NiIsImlhdCI6MTc2OTY5NTU...</msg>
+<msg time="2026-01-29T12:29:29.526006" level="INFO">${json} = {'message': 'Login realizado com sucesso', 'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5ld191c3VhcmlvXzZAcWEuY29tIiwicGFzc3dvcmQiOiJuZXdfMTIzNDU2IiwiaWF0IjoxNzY5NzAwNTY...</msg>
 <var>${json}</var>
 <arg>${resp.json()}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.518857" elapsed="0.000691"/>
+<status status="PASS" start="2026-01-29T12:29:29.525206" elapsed="0.000837"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2026-01-29T11:06:11.519828" level="INFO">${mensagem} = Login realizado com sucesso</msg>
+<msg time="2026-01-29T12:29:29.526358" level="INFO">${mensagem} = Login realizado com sucesso</msg>
 <var>${mensagem}</var>
 <arg>${json}</arg>
 <arg>message</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.519683" elapsed="0.000160"/>
+<status status="PASS" start="2026-01-29T12:29:29.526185" elapsed="0.000201"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2026-01-29T11:06:11.519996" level="INFO">${token} = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5ld191c3VhcmlvXzE0QHFhLmNvbSIsInBhc3N3b3JkIjoibmV3XzEyMzQ1NiIsImlhdCI6MTc2OTY5NTU3MSwiZXhwIjoxNzY5Njk2MTcxfQ.zVJZJXHMO8rNgdJhXr2spOsAUT-iN00-C...</msg>
+<msg time="2026-01-29T12:29:29.526675" level="INFO">${token} = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5ld191c3VhcmlvXzZAcWEuY29tIiwicGFzc3dvcmQiOiJuZXdfMTIzNDU2IiwiaWF0IjoxNzY5NzAwNTY5LCJleHAiOjE3Njk3MDExNjl9.kSuNEF66Lg78rZjqBHkxJnkNg2IQ34P5GMs...</msg>
 <var>${token}</var>
 <arg>${json}</arg>
 <arg>authorization</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.519909" elapsed="0.000103"/>
+<status status="PASS" start="2026-01-29T12:29:29.526510" elapsed="0.000195"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2026-01-29T11:06:11.520280" level="INFO">${mensagem} = Login realizado com sucesso</msg>
+<msg time="2026-01-29T12:29:29.527179" level="INFO">${mensagem} = Login realizado com sucesso</msg>
 <arg>${mensagem}</arg>
 <arg>${mensagem}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.520092" elapsed="0.000213"/>
+<status status="PASS" start="2026-01-29T12:29:29.526849" elapsed="0.000376"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2026-01-29T11:06:11.520522" level="INFO">${token} = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5ld191c3VhcmlvXzE0QHFhLmNvbSIsInBhc3N3b3JkIjoibmV3XzEyMzQ1NiIsImlhdCI6MTc2OTY5NTU3MSwiZXhwIjoxNzY5Njk2MTcxfQ.zVJZJXHMO8rNgdJhXr2spOsAUT-iN00-C...</msg>
+<msg time="2026-01-29T12:29:29.527632" level="INFO">${token} = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5ld191c3VhcmlvXzZAcWEuY29tIiwicGFzc3dvcmQiOiJuZXdfMTIzNDU2IiwiaWF0IjoxNzY5NzAwNTY5LCJleHAiOjE3Njk3MDExNjl9.kSuNEF66Lg78rZjqBHkxJnkNg2IQ34P5GMs...</msg>
 <arg>${token}</arg>
 <arg>${token}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.520375" elapsed="0.000171"/>
+<status status="PASS" start="2026-01-29T12:29:29.527358" elapsed="0.000310"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>\n</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.520612" elapsed="0.000155"/>
+<status status="PASS" start="2026-01-29T12:29:29.527766" elapsed="0.000211"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>==============================================================================</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.520834" elapsed="0.000119"/>
+<status status="PASS" start="2026-01-29T12:29:29.528081" elapsed="0.000187"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Usuário logado com sucesso!!!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.521024" elapsed="0.000110"/>
+<status status="PASS" start="2026-01-29T12:29:29.528362" elapsed="0.000172"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>==============================================================================</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.521200" elapsed="0.000112"/>
+<status status="PASS" start="2026-01-29T12:29:29.528630" elapsed="0.000166"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>\n...Mensagem: ${mensagem}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.521382" elapsed="0.000132"/>
+<status status="PASS" start="2026-01-29T12:29:29.528892" elapsed="0.000194"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>......Token: ${token}\n</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T11:06:11.521585" elapsed="0.000137"/>
+<status status="PASS" start="2026-01-29T12:29:29.529180" elapsed="0.000192"/>
 </kw>
-<status status="PASS" start="2026-01-29T11:06:10.807151" elapsed="0.714625"/>
+<status status="PASS" start="2026-01-29T12:29:28.809140" elapsed="0.720298"/>
 </kw>
-<status status="PASS" start="2026-01-29T11:06:08.269227" elapsed="3.252674"/>
+<kw name="E então exclui o usuario criado" owner="kws_users_tests_api">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-01-29T12:29:29.530009" level="INFO">Creating Session using : alias=httpbin, url=https://serverest.dev, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>httpbin</arg>
+<arg>${BASE_URL}</arg>
+<arg>disable_warnings=True</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-01-29T12:29:29.529830" elapsed="0.000338"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-01-29T12:29:29.530473" level="INFO">${headers} = {'Authorization': ''}</msg>
+<var>${headers}</var>
+<arg>Authorization=</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-01-29T12:29:29.530264" elapsed="0.000229"/>
+</kw>
+<kw name="DELETE On Session" owner="RequestsLibrary">
+<msg time="2026-01-29T12:29:29.875281" level="INFO">DELETE Request : url=https://serverest.dev/usuarios/KodsedID3qHaUzsP 
+ path_url=/usuarios/KodsedID3qHaUzsP 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': '', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2026-01-29T12:29:29.875409" level="INFO">DELETE Response : url=https://serverest.dev/usuarios/KodsedID3qHaUzsP 
+ status=200, reason=OK 
+ headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'x-cloud-trace-context': '5eb6ac7a8078bdc9ef20b66194c0e654', 'date': 'Thu, 29 Jan 2026 15:29:29 GMT', 'server': 'Google Frontend', 'Content-Length': '51'} 
+ body={
+    "message": "Registro excluído com sucesso"
+} 
+ </msg>
+<msg time="2026-01-29T12:29:29.875569" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<var>${resp}</var>
+<arg>httpbin</arg>
+<arg>${BASE_URL}${list_users}/${ID}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a DELETE request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-01-29T12:29:29.530578" elapsed="0.345019"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>'${resp.status_code}'=='200'</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-01-29T12:29:29.875822" elapsed="0.001059"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-01-29T12:29:29.877570" level="INFO">${json} = {'message': 'Registro excluído com sucesso'}</msg>
+<var>${json}</var>
+<arg>${resp.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-01-29T12:29:29.877024" elapsed="0.000573"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-29T12:29:29.877883" level="INFO">${mensagem} = Registro excluído com sucesso</msg>
+<var>${mensagem}</var>
+<arg>${json}</arg>
+<arg>message</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-29T12:29:29.877722" elapsed="0.000185"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2026-01-29T12:29:29.878329" level="INFO">${mensagem} = Registro excluído com sucesso</msg>
+<arg>${mensagem}</arg>
+<arg>${mensagem}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2026-01-29T12:29:29.878040" elapsed="0.000326"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-29T12:29:29.878470" elapsed="0.000255"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>==============================================================================</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-29T12:29:29.878828" elapsed="0.000185"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Usuário excluído com sucesso!!!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-29T12:29:29.879115" elapsed="0.000182"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>==============================================================================</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-29T12:29:29.879395" elapsed="0.000174"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n...Mensagem: ${mensagem}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-29T12:29:29.879669" elapsed="0.000208"/>
+</kw>
+<status status="PASS" start="2026-01-29T12:29:29.529650" elapsed="0.350294"/>
+</kw>
+<status status="PASS" start="2026-01-29T12:29:26.941068" elapsed="2.939035"/>
 </test>
 <doc>Fazer o CRUD na Api ServeRest</doc>
-<status status="PASS" start="2026-01-29T11:06:08.069956" elapsed="3.452334"/>
+<status status="PASS" start="2026-01-29T12:29:26.798065" elapsed="3.082539"/>
 </suite>
-<status status="PASS" start="2026-01-29T11:06:08.058462" elapsed="3.464243"/>
+<status status="PASS" start="2026-01-29T12:29:26.788888" elapsed="3.092218"/>
 </suite>
 <statistics>
 <total>
