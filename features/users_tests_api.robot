@@ -15,5 +15,5 @@ Cenario 01: Realizar o CRUD na API Servrest
     Dado que eu acessse o Swaagger ServeReest e liste todos os usuarios
     E ppreencha os dados para criação de novo usuário
     Quando alterar os dados do usuário criado
-    Então ser1a possível realizar login com os novos dados  
+    Então será possível realizar login com os novos dados  
 

@@ -70,7 +70,7 @@ Quando alterar os dados do usuário criado
     Log To Console  ==============================================================================
     Log To Console  \n..Mensagem: ${message}
 
-Então ser1a possível realizar login com os novos dados
+Então será possível realizar login com os novos dados
     Listar Usuario pelo ID
     Create Session    httpbin    ${BASE_URL}    disable_warnings=True 
     ${headers}=    Create Dictionary    Authorization=
