@@ -11,7 +11,6 @@ Resource    ../base.robot
 
 *** Keywords ***
 Dado que eu acessse o Swaagger ServeReest e liste todos os usuarios
-
     Create Session    httpbin    ${BASE_URL}    disable_warnings=True 
     ${headers}=    Create Dictionary    Authorization=
     ${resp}=    GET On Session   httpbin    ${BASE_URL}${list_users}    headers=${headers}
