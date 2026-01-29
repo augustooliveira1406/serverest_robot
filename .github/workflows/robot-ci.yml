@@ -1,4 +1,4 @@
-name: Robot API Tests
+name: Robot ServerRest API Tests
 
 on: [push, pull_request]
 
