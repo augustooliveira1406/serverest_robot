@@ -33,7 +33,7 @@ usuários, validando:
 
 robot-api-tests/
 
--   tests/
+-   features/
 -   resources/
 -   .github/workflows/
 -   requirements.txt
@@ -53,9 +53,9 @@ robot-api-tests/
 
 ### Clone do repositório
 
-git clone https://github.com/SEU_USUARIO/servrest_robot.git
+git clone https://github.com/SEU_USUARIO/serverest_robot.git
 
-cd servrest_robot
+cd serverest_robot
 
 ### Criar ambiente virtual
 
@@ -81,7 +81,7 @@ O token é gerenciado automaticamente pelos testes.
 
 ## ▶️ Execução dos Testes
 
-robot -d reports tests/
+robot -d reports features/
 
 ------------------------------------------------------------------------
 
@@ -111,24 +111,20 @@ reports/
 ### GET /users/{id}
 
 -   Consultar usuário existente
--   Consultar inexistente
 
 ### PUT /users/{id}
 
 -   Atualizar dados
--   Atualizar inválido
 
 ### DELETE /users/{id}
 
 -   Excluir usuário
--   Excluir inexistente
 
 ------------------------------------------------------------------------
 
 ## 📈 Cobertura
 
 -   Fluxos positivos
--   Fluxos negativos
 -   Autenticação
 -   Status code
 -   Regras de negócio
